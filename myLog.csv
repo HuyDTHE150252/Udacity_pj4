@@ -1,0 +1,74 @@
+2024-07-12 02:35:17.425  INFO 15608 --- [main] c.example.demo.SareetaApplicationTests   : Starting SareetaApplicationTests on huydt with PID 15608 (started by huy19 in F:\udacity\starter_code)
+2024-07-12 02:35:17.435  INFO 15608 --- [main] c.example.demo.SareetaApplicationTests   : No active profile set, falling back to default profiles: default
+2024-07-12 02:35:18.761  INFO 15608 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2024-07-12 02:35:19.188  INFO 15608 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 389ms. Found 4 repository interfaces.
+2024-07-12 02:35:21.502  INFO 15608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4a716422] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-12 02:35:22.538  INFO 15608 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-12 02:35:23.311  INFO 15608 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-12 02:35:23.444  INFO 15608 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2024-07-12 02:35:23.602  INFO 15608 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2024-07-12 02:35:23.604  INFO 15608 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2024-07-12 02:35:23.819  INFO 15608 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2024-07-12 02:35:24.051  INFO 15608 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-07-12 02:35:25.114  INFO 15608 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-12 02:35:26.429  WARN 15608 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-12 02:35:26.688  INFO 15608 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2c1a95a2, org.springframework.security.web.context.SecurityContextPersistenceFilter@726d8fa0, org.springframework.security.web.header.HeaderWriterFilter@70e54ec3, org.springframework.web.filter.CorsFilter@1adf387e, org.springframework.security.web.authentication.logout.LogoutFilter@7bc8da3f, com.example.demo.security.JWTAuthenticationFilter@72b53f27, com.example.demo.security.JWTAuthenticationVerficationFilter@1be4a7e3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@66130c3b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@32f14274, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@632b96b8, org.springframework.security.web.session.SessionManagementFilter@64b8eb96, org.springframework.security.web.access.ExceptionTranslationFilter@52b891de, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@314c28dc]
+2024-07-12 02:35:27.585  INFO 15608 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2024-07-12 02:35:28.156  INFO 15608 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-12 02:35:28.156  INFO 15608 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-12 02:35:28.188  INFO 15608 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 31 ms
+2024-07-12 02:35:28.234  INFO 15608 --- [main] c.example.demo.SareetaApplicationTests   : Started SareetaApplicationTests in 11.535 seconds (JVM running for 14.326)
+2024-07-12 02:35:28.706  INFO 15608 --- [main] c.e.demo.controllers.UserController      : create user successfully: user =  com.example.demo.model.requests.CreateUserRequest@395115ac
+2024-07-12 02:35:28.899  INFO 15608 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2024-07-12 02:35:29.685  WARN 15608 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23505, SQLState: 23505
+2024-07-12 02:35:29.686 ERROR 15608 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2024-07-12 02:35:29.691 ERROR 15608 --- [main] c.e.demo.controllers.UserController      : There is an error when trying to create user: user = com.example.demo.model.requests.CreateUserRequest@6894436e
+2024-07-12 02:35:29.708  INFO 15608 --- [main] c.e.demo.controllers.UserController      : Get user by id: 100
+2024-07-12 02:35:29.766  INFO 15608 --- [main] c.e.demo.controllers.ItemController      : create Item successfully: item = com.example.demo.model.persistence.Item@22
+2024-07-12 02:35:29.844  INFO 15608 --- [main] c.e.demo.controllers.CartController      : cart is added: cart = com.example.demo.model.persistence.Cart@3ca564aa
+2024-07-12 02:35:29.879 ERROR 15608 --- [main] c.e.demo.controllers.UserController      : Username Or Password is missing: user =  com.example.demo.model.requests.CreateUserRequest@68024e57
+2024-07-12 02:35:29.898 ERROR 15608 --- [main] c.e.demo.controllers.CartController      : User is not found for creating cart request: user = Not registered name
+2024-07-12 02:35:30.049  WARN 15608 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23505, SQLState: 23505
+2024-07-12 02:35:30.049 ERROR 15608 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2024-07-12 02:35:30.050 ERROR 15608 --- [main] c.e.demo.controllers.UserController      : There is an error when trying to create user: user = com.example.demo.model.requests.CreateUserRequest@5f26fc4d
+2024-07-12 02:35:30.061 ERROR 15608 --- [main] c.e.demo.controllers.UserController      : Find user by username: MockUserName
+2024-07-12 02:35:30.078 ERROR 15608 --- [main] c.e.demo.controllers.ItemController      : Item data is error: item = com.example.demo.model.persistence.Item@1f
+2024-07-12 02:35:30.103  INFO 15608 --- [main] c.e.demo.controllers.OrderController     : create order successfully: com.example.demo.model.persistence.UserOrder@1254a3cd
+2024-07-12 02:35:30.123  INFO 15608 --- [main] c.e.demo.controllers.ItemController      : Item can be found by name Round Widget
+2024-07-12 02:35:30.262  WARN 15608 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23505, SQLState: 23505
+2024-07-12 02:35:30.262 ERROR 15608 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2024-07-12 02:35:30.263 ERROR 15608 --- [main] c.e.demo.controllers.UserController      : There is an error when trying to create user: user = com.example.demo.model.requests.CreateUserRequest@45f4c27c
+2024-07-12 02:35:30.269 ERROR 15608 --- [main] c.e.demo.controllers.UserController      : Find user by username: MockUserName
+2024-07-12 02:35:30.282  INFO 15608 --- [main] c.e.demo.controllers.UserController      : Get user by id: 1
+2024-07-12 02:35:30.415  WARN 15608 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23505, SQLState: 23505
+2024-07-12 02:35:30.416 ERROR 15608 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2024-07-12 02:35:30.416 ERROR 15608 --- [main] c.e.demo.controllers.UserController      : There is an error when trying to create user: user = com.example.demo.model.requests.CreateUserRequest@7236213e
+2024-07-12 02:35:30.423 ERROR 15608 --- [main] c.e.demo.controllers.UserController      : Find user by username: Test
+2024-07-12 02:35:30.439 ERROR 15608 --- [main] c.e.demo.controllers.CartController      : User is not found for removing cart request: user = Not registered name
+2024-07-12 02:35:30.453 ERROR 15608 --- [main] c.e.demo.controllers.ItemController      : Item can not be found by name test
+2024-07-12 02:35:30.469 ERROR 15608 --- [main] c.e.demo.controllers.CartController      : Item id is not found for creating cart request: item id = 100
+2024-07-12 02:35:30.480  INFO 15608 --- [main] c.e.demo.controllers.ItemController      : Item can be found by Id 1
+2024-07-12 02:35:30.497  INFO 15608 --- [main] c.e.demo.controllers.ItemController      : create Item successfully: item = com.example.demo.model.persistence.Item@23
+2024-07-12 02:35:30.514 ERROR 15608 --- [main] c.e.demo.controllers.CartController      : Item id is not found for removing cart request: item id = 100
+2024-07-12 02:35:30.532  INFO 15608 --- [main] c.e.demo.controllers.OrderController     : create order successfully: com.example.demo.model.persistence.UserOrder@1d208795
+2024-07-12 02:35:30.539 ERROR 15608 --- [main] c.e.demo.controllers.OrderController     : Order not found
+2024-07-12 02:35:30.550  INFO 15608 --- [main] c.e.demo.controllers.ItemController      : create Item successfully: item = com.example.demo.model.persistence.Item@24
+2024-07-12 02:35:30.561  INFO 15608 --- [main] c.e.demo.controllers.CartController      : cart is removed: cart = com.example.demo.model.persistence.Cart@467e7793
+2024-07-12 02:35:30.577  INFO 15608 --- [main] c.e.demo.controllers.OrderController     : create order successfully: com.example.demo.model.persistence.UserOrder@488c608a
+2024-07-12 02:35:30.756  WARN 15608 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23505, SQLState: 23505
+2024-07-12 02:35:30.756 ERROR 15608 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2024-07-12 02:35:30.757 ERROR 15608 --- [main] c.e.demo.controllers.UserController      : There is an error when trying to create user: user = com.example.demo.model.requests.CreateUserRequest@18c95fbb
+2024-07-12 02:35:30.892 ERROR 15608 --- [main] c.e.demo.controllers.OrderController     : User must be registered before submitting an order
+2024-07-12 02:35:30.904 ERROR 15608 --- [main] c.e.demo.controllers.ItemController      : Item can not be found by Id 100
+2024-07-12 02:35:30.914 ERROR 15608 --- [main] c.e.demo.controllers.UserController      : Password must include more than 7 characters: password = 123
+2024-07-12 02:35:30.923  INFO 15608 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2024-07-12 02:35:30.925  INFO 15608 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-12 02:35:30.929  INFO 15608 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-12 02:35:30.931  INFO 15608 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
